@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button genre_1;
     Button genre_2;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         sharedpref = new SharedPref(this);
