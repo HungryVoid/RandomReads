@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Random Reads</string>
+    <string name="random_story">Randomize</string>
+    <string name="story_text"></string>
+    <string name="genre_1">Horror</string>
+    <string name="genre_2">Romance</string>
+
+</resources>
