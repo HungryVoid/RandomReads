@@ -20,7 +20,6 @@
         android:scrollbars="vertical"
         android:text="@string/story_text"
         android:textColor="?attr/textcolor"
-        android:gravity="center"
         android:textSize="18sp"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
