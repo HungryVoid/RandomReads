@@ -19,11 +19,11 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 public class MainActivity extends AppCompatActivity {
 
 
-    private Switch night_mode;
     SharedPref sharedpref;
     Button random_story;
     Button genre_1;
     Button genre_2;
+    Button sett_butt;
 
 
     @Override
@@ -38,23 +38,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        night_mode=(Switch)findViewById(R.id.night_mode);
-        if (sharedpref.loadNightModeState()==true){
-            night_mode.setChecked(true);
-        }
-        night_mode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    sharedpref.setNightModeState(true);
-                    restartApp();
-                }
-                else{
-                    sharedpref.setNightModeState(false);
-                    restartApp();
-                }
-            }
-        });
 
         random_story = (Button) findViewById(R.id.random_story);
 
@@ -150,13 +133,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        sett_butt = (Button) findViewById(R.id.sett_butt);
+
+        sett_butt.setOnClickListener(new View.OnClickListener(){
+        public void onClick(View view){
+            Intent myIntent = new Intent(getBaseContext(), Settings.class);
+            startActivity(myIntent);
+            }
+
+
+        });
 
     }
 
-    public void restartApp(){
-        Intent i = new Intent(getApplicationContext(),MainActivity.class);
-        startActivity(i);
-        finish();
-    }
+
 
 }

@@ -4,5 +4,7 @@
     <string name="story_text"></string>
     <string name="genre_1">Horror</string>
     <string name="genre_2">Romance</string>
+    <string name="sett_butt">Settings</string>
+    <string name="go_back">GO BACK</string>
 
 </resources>
