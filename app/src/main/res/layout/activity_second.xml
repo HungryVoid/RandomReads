@@ -7,10 +7,32 @@
     tools:context=".SecondActivity"
     android:background="?attr/backgroundcolor">
 
+    <RadioButton
+        android:id="@+id/rad_sml"
+        android:layout_width="51dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/rad_sml"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/rad_big"
+        android:layout_width="55dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/rad_big"
+        app:layout_constraintStart_toEndOf="@+id/rad_sml"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/story_text"
-        android:layout_width="309dp"
-        android:layout_height="593dp"
+        android:layout_width="307dp"
+        android:layout_height="543dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -20,7 +42,7 @@
         android:scrollbars="vertical"
         android:text="@string/story_text"
         android:textColor="?attr/textcolor"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:fontFamily="sans-serif"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

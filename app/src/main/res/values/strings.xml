@@ -6,5 +6,7 @@
     <string name="genre_2">Romance</string>
     <string name="sett_butt">Settings</string>
     <string name="go_back">GO BACK</string>
+    <string name="rad_sml">20</string>
+    <string name="rad_big">40</string>
 
 </resources>
