@@ -10,13 +10,12 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class SecondActivity extends AppCompatActivity {
 
     SharedPref sharedpref;
-    RadioButton rad_sml;
-    RadioButton rad_big;
-    TextView story_text;
+    ToggleButton toggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +28,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        rad_sml = (RadioButton) findViewById(R.id.rad_sml);
-        rad_big = (RadioButton) findViewById(R.id.rad_big);
+        toggle = (ToggleButton) findViewById(R.id.toggle);
 
 
         String savedExtra = getIntent().getStringExtra("text_thing");
@@ -39,25 +37,22 @@ public class SecondActivity extends AppCompatActivity {
 
         story_text.setMovementMethod(new ScrollingMovementMethod());
 
-        rad_sml.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                story_text.setTextSize(20);
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
+                if(isChecked){
+                    story_text.setTextSize(40);
+                }
+                else
+                {
+                    story_text.setTextSize(20);
+                }
 
             }
 
         });
 
-        rad_big.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                story_text.setTextSize(40);
-
-            }
-
-        });
 
     }
 

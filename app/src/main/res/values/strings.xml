@@ -8,5 +8,6 @@
     <string name="go_back">GO BACK</string>
     <string name="rad_sml">20</string>
     <string name="rad_big">40</string>
+    <string name="toggle">toggle</string>
 
 </resources>
