@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button random_story;
     Button genre_1;
     Button genre_2;
+    Button genre_3;
     Button sett_butt;
 
 
@@ -118,6 +119,35 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     InputStream is = getAssets().open("2/" + randomFile + ".txt");
+                    int size = is.available();
+                    byte[] buffer = new byte[size];
+                    is.read(buffer);
+                    is.close();
+                    text = new String(buffer);
+                } catch (IOException ex){
+                    ex.printStackTrace();
+                }
+                Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
+                myIntent.putExtra("text_thing", text);
+                startActivity(myIntent);
+            }
+        });
+
+        genre_3 = (Button) findViewById(R.id.genre_3);
+
+        genre_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = "";
+
+                Random r = new Random();
+                int fileStart = 1;
+                int fileEnd = 4;
+                int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
+
+
+                try {
+                    InputStream is = getAssets().open("3/" + randomFile + ".txt");
                     int size = is.available();
                     byte[] buffer = new byte[size];
                     is.read(buffer);
