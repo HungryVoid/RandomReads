@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.ToggleButton;
 
 public class Settings extends AppCompatActivity {
 
-    private Switch night_mode;
+    private ToggleButton night_mode;
     SharedPref sharedpref;
     Button go_back;
 
@@ -27,7 +28,7 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
 
-        night_mode=(Switch)findViewById(R.id.night_mode);
+        night_mode=(ToggleButton)findViewById(R.id.night_mode);
         if (sharedpref.loadNightModeState()==true){
             night_mode.setChecked(true);
         }

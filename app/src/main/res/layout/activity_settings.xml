@@ -7,39 +7,34 @@
     tools:context=".Settings"
     android:background="?attr/backgroundcolor">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="169dp"
-        android:layout_height="266dp"
-        android:layout_marginTop="118dp"
-        android:layout_marginBottom="55dp"
-        android:text="       Hola"
-        android:textSize="30sp"
-        android:textColor="?attr/textcolor"
-        app:layout_constraintBottom_toTopOf="@+id/go_back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/go_back"
-        android:layout_width="192dp"
-        android:layout_height="152dp"
-        android:layout_marginBottom="140dp"
+        android:layout_width="211dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="124dp"
         android:text="@string/go_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/night_mode" />
 
-    <Switch
+    <ToggleButton
         android:id="@+id/night_mode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="24dp"
-        android:textColor="?attr/textcolor"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="159dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="95dp"
+        android:textOff="Day"
+        android:textOn="Night"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/go_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
