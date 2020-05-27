@@ -3,7 +3,7 @@ package com.wolfrush.randomreads;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class SharedPref {
+public class SharedPref {//The master Night Mode code... I think there's more in the XMLs?
 
     SharedPreferences mySharedPref;
     public SharedPref(Context context){

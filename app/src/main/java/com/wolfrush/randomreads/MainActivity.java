@@ -19,7 +19,7 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 public class MainActivity extends AppCompatActivity {
 
 
-    SharedPref sharedpref;
+    SharedPref sharedpref; //Used for Night Mode
     Button random_story;
     Button genre_1;
     Button genre_2;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        sharedpref = new SharedPref(this);
+        sharedpref = new SharedPref(this); //This is the Night Mode Code
         if (sharedpref.loadNightModeState()==true){
             setTheme(R.style.darktheme);
         }
@@ -47,18 +47,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String text = "";
 
-                Random a = new Random();
+                Random a = new Random(); //Choose a random folder
                 int folderStart = 1;
                 int folderEnd = 4;
                 int randomFolder = a.nextInt(folderEnd - folderStart) + folderStart;
 
-                Random r = new Random();
+                Random r = new Random(); //Choose a random file within the folder
                 int fileStart = 1;
                 int fileEnd = 4;
                 int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
 
 
-                try {
+                try { //This is what opens up the chosen file
                     InputStream is = getAssets().open(randomFolder + "/" + randomFile + ".txt");
                     int size = is.available();
                     byte[] buffer = new byte[size];
@@ -68,12 +68,13 @@ public class MainActivity extends AppCompatActivity {
                 } catch (IOException ex){
                     ex.printStackTrace();
                 }
-                Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
+                Intent myIntent = new Intent(getBaseContext(), SecondActivity.class); //This sends the file and moves us to the new screen to display it
                 myIntent.putExtra("text_thing", text);
                 startActivity(myIntent);
             }
         });
 
+//Everything below are just more buttons
 
         genre_1 = (Button) findViewById(R.id.genre_1);
 

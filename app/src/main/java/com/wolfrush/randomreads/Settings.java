@@ -11,12 +11,12 @@ import android.widget.ToggleButton;
 
 public class Settings extends AppCompatActivity {
 
-    private ToggleButton night_mode;
+    private Switch night_mode;
     SharedPref sharedpref;
     Button go_back;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {//The same Night Mode code as the other activities
 
         sharedpref = new SharedPref(this);
         if (sharedpref.loadNightModeState()==true){
@@ -28,7 +28,7 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
 
-        night_mode=(ToggleButton)findViewById(R.id.night_mode);
+        night_mode=(Switch)findViewById(R.id.night_mode);//This is the switch that controls Night Mode
         if (sharedpref.loadNightModeState()==true){
             night_mode.setChecked(true);
         }
@@ -62,7 +62,7 @@ public class Settings extends AppCompatActivity {
     }
 
 
-    public void restartApp(){
+    public void restartApp(){//This is necessary to restart the app and boot it with Night Mode on
         Intent i = new Intent(getApplicationContext(),Settings.class);
         startActivity(i);
         finish();
