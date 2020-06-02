@@ -7,6 +7,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -37,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        //This code is for randomly choosing the background image
+        int[] img = new int[] {R.drawable.img1, R.drawable.img2}; //These are the images stored in drawable
+
+        setContentView(R.layout.activity_main);
+        ImageView bgImg = (ImageView)findViewById(R.id.bgImg); //This is the ImageView created in the XML
+
+        int randImg = (int)(Math.random() * img.length); //Chooses a corresponding number to one of the images listed above at random
+
+        bgImg.setBackgroundResource(img[randImg]);//This takes the number, applies it to a file and posts the image
 
 
 
