@@ -61,17 +61,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/sett_butt"
-        android:layout_width="100dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="24dp"
-        android:text="@string/sett_butt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
         android:id="@+id/genre_3"
         android:layout_width="89dp"
         android:layout_height="56dp"
@@ -84,17 +73,30 @@
 
     <ImageView
         android:id="@+id/bgImg"
-        android:layout_width="157dp"
-        android:layout_height="129dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="220dp"
-        android:layout_marginRight="220dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/random_story"
+        android:layout_width="408dp"
+        android:layout_height="730dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:alpha="0.4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/sett_butt"
+        android:layout_width="58dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/sett_butt" />
 
 </android.support.constraint.ConstraintLayout>
