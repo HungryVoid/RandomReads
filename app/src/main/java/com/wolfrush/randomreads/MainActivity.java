@@ -1,6 +1,9 @@
 package com.wolfrush.randomreads;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -43,22 +46,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        //This code is for randomly choosing the background image
-        int[] img = new int[] {R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4, R.drawable.img5,
-                R.drawable.img6, R.drawable.img7, R.drawable.img8, R.drawable.img9, R.drawable.img10}; //These are the images stored in drawable
 
-        setContentView(R.layout.activity_main);
-        ImageView bgImg = (ImageView)findViewById(R.id.bgImg); //This is the ImageView created in the XML
+        ConstraintLayout bg = (ConstraintLayout) findViewById(R.id.bg); //This references the background in the activity_main XML
 
-        int randImg = (int)(Math.random() * img.length); //Chooses a corresponding number to one of the images listed above at random
+        AlphaAnimation alpha = new AlphaAnimation(0f, 1f); //Fade in from 0 to 0.4 (XML has 0.4 set as the maximum)
+        alpha.setDuration(2000); //Time it takes animation to complete
+        alpha.setFillAfter(true); //Very important! Makes the full animation smooth
+        bg.startAnimation(alpha); //Starts the animation
 
-        bgImg.setBackgroundResource(img[randImg]);//This takes the number, applies it to a file and posts the image
-
-
-        AlphaAnimation alpha = new AlphaAnimation(0f, 0.4f);
-        alpha.setDuration(2000);
-        alpha.setFillAfter(true);
-        bgImg.startAnimation(alpha);
 
 
         random_story = (Button) findViewById(R.id.random_story);
@@ -185,7 +180,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        //sett_butt = (Button) findViewById(R.id.sett_butt);
         ImageButton sett_butt = (ImageButton)findViewById(R.id.sett_butt);
         sett_butt.setImageResource(R.drawable.sett_butt);
 
