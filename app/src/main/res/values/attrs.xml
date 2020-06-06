@@ -7,5 +7,8 @@
         <attr name="tintcolor" format="color"/>
         <attr name="buttoncolor" format="color"/>
         <attr name="bgImg" format="reference"/>
+        <attr name="sett_butt" format="reference"/>
+        <attr name="go_back_story" format="reference"/>
+        <attr name="toggle" format="reference"/>
     </declare-styleable>
 </resources>

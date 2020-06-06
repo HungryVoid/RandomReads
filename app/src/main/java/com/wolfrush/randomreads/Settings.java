@@ -53,6 +53,7 @@ public class Settings extends AppCompatActivity {
             public void onClick(View view){
                 Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(myIntent);
+                finish();
             }
 
 

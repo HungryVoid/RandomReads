@@ -8,6 +8,7 @@ import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -56,12 +57,13 @@ public class SecondActivity extends AppCompatActivity {
 
         });
 
-        go_back_story = (Button) findViewById(R.id.go_back_story);
+        ImageButton go_back_story = (ImageButton)findViewById(R.id.go_back_story);
 
         go_back_story.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(myIntent);
+                finish();
             }
 
 

@@ -82,6 +82,6 @@
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/sett_butt" />
+        app:srcCompat="?attr/sett_butt" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,27 +1,17 @@
 package com.wolfrush.randomreads;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.Switch;
-import android.widget.TextView;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Random;
-
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(getBaseContext(), SecondActivity.class); //This sends the file and moves us to the new screen to display it
                 myIntent.putExtra("text_thing", text);
                 startActivity(myIntent);
+                finish();
             }
         });
 
@@ -118,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
                 myIntent.putExtra("text_thing", text);
                 startActivity(myIntent);
+                finish();
             }
         });
 
@@ -147,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
                 myIntent.putExtra("text_thing", text);
                 startActivity(myIntent);
+                finish();
             }
         });
 
@@ -176,17 +169,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
                 myIntent.putExtra("text_thing", text);
                 startActivity(myIntent);
+                finish();
             }
         });
 
 
         ImageButton sett_butt = (ImageButton)findViewById(R.id.sett_butt);
-        sett_butt.setImageResource(R.drawable.sett_butt);
 
         sett_butt.setOnClickListener(new View.OnClickListener(){
         public void onClick(View view){
             Intent myIntent = new Intent(getBaseContext(), Settings.class);
             startActivity(myIntent);
+            finish();
             }
 
 
