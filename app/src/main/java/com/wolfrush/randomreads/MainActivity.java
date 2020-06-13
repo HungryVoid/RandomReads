@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     SharedPref sharedpref; //Used for Night Mode
     Button random_story;
-    Button genre_1;
-    Button genre_2;
-    Button genre_3;
+    //Button genre_1;
+    //Button genre_2;
+   // Button genre_3;
     Button sett_butt;
 
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout bg = (ConstraintLayout) findViewById(R.id.bg); //This references the background in the activity_main XML
 
         AlphaAnimation alpha = new AlphaAnimation(0f, 1f); //Fade in from 0 to 0.4 (XML has 0.4 set as the maximum)
-        alpha.setDuration(2000); //Time it takes animation to complete
+        alpha.setDuration(1000); //Time it takes animation to complete
         alpha.setFillAfter(true); //Very important! Makes the full animation smooth
         bg.startAnimation(alpha); //Starts the animation
 
@@ -53,19 +53,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String text = "";
 
-                Random a = new Random(); //Choose a random folder
+                /*Random a = new Random(); //Choose a random folder
                 int folderStart = 1;
                 int folderEnd = 4;
-                int randomFolder = a.nextInt(folderEnd - folderStart) + folderStart;
+                int randomFolder = a.nextInt(folderEnd - folderStart) + folderStart;*/
 
                 Random r = new Random(); //Choose a random file within the folder
                 int fileStart = 1;
-                int fileEnd = 4;
+                int fileEnd = 35;
                 int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
 
 
                 try { //This is what opens up the chosen file
-                    InputStream is = getAssets().open(randomFolder + "/" + randomFile + ".txt");
+                    InputStream is = getAssets().open(randomFile + ".txt");
                     int size = is.available();
                     byte[] buffer = new byte[size];
                     is.read(buffer);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
 //Everything below are just more buttons
 
-        genre_1 = (Button) findViewById(R.id.genre_1);
+        /*genre_1 = (Button) findViewById(R.id.genre_1);
 
         genre_1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(myIntent);
                 finish();
             }
-        });
+        });*/
 
 
         ImageButton sett_butt = (ImageButton)findViewById(R.id.sett_butt);

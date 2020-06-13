@@ -10,7 +10,7 @@
         <item name="cardbackground">#ffffff</item>
         <item name="textcolor">#808080</item>
         <item name="tintcolor">#000000</item>
-        <item name="buttoncolor">#2196F3</item>
+        <item name="buttoncolor">#F14343</item>
         <item name="bgImg">@drawable/img1</item>
         <item name="sett_butt">@drawable/sett_butt1</item>
         <item name="go_back_story">@drawable/go_back_story1</item>

@@ -8,10 +8,11 @@
     android:background="?attr/bgImg"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/random_story"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
+        android:layout_width="243dp"
+        android:layout_height="206dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
@@ -19,58 +20,12 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/random_story"
+        android:background="?attr/buttoncolor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
-
-    <Button
-        android:id="@+id/genre_1"
-        android:layout_width="88dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="45dp"
-        android:text="@string/genre_1"
-        app:layout_constraintBottom_toTopOf="@+id/genre_3"
-        app:layout_constraintEnd_toStartOf="@+id/genre_2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/random_story" />
-
-    <Button
-        android:id="@+id/genre_2"
-        android:layout_width="102dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
-        android:layout_marginBottom="224dp"
-        android:text="@string/genre_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/genre_1"
-        app:layout_constraintTop_toBottomOf="@+id/random_story"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/genre_3"
-        android:layout_width="89dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="48dp"
-        android:text="@string/genre_3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genre_1" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/sett_butt"
