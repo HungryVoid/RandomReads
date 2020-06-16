@@ -72,6 +72,11 @@ public class SecondActivity extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
+        startActivity(myIntent);
+        finish();
+    }
 
 }
