@@ -10,11 +10,12 @@
         <item name="cardbackground">#ffffff</item>
         <item name="textcolor">#808080</item>
         <item name="tintcolor">#000000</item>
-        <item name="buttoncolor">#F14343</item>
+        <item name="buttoncolor">#008476</item>
         <item name="bgImg">@drawable/img1</item>
         <item name="sett_butt">@drawable/sett_butt1</item>
         <item name="go_back_story">@drawable/go_back_story1</item>
         <item name="toggle">@drawable/toggle1</item>
+        <item name="night_mode">@drawable/bulb_off</item>
     </style>
 
     <!-- Night theme. -->
@@ -27,11 +28,12 @@
         <item name="cardbackground">#424242</item>
         <item name="textcolor">#A5A5A5</item>
         <item name="tintcolor">#ffffff</item>
-        <item name="buttoncolor">#2196F3</item>
+        <item name="buttoncolor">#008476</item>
         <item name="bgImg">@drawable/img2</item>
         <item name="sett_butt">@drawable/sett_butt2</item>
         <item name="go_back_story">@drawable/go_back_story2</item>
         <item name="toggle">@drawable/toggle2</item>
+        <item name="night_mode">@drawable/bulb_on</item>
     </style>
 
 </resources>

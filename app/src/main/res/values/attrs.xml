@@ -10,5 +10,6 @@
         <attr name="sett_butt" format="reference"/>
         <attr name="go_back_story" format="reference"/>
         <attr name="toggle" format="reference"/>
+        <attr name="night_mode" format="reference"/>
     </declare-styleable>
 </resources>

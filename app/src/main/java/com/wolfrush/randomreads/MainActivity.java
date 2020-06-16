@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     SharedPref sharedpref; //Used for Night Mode
-    Button random_story;
+    //Button random_story;
     //Button genre_1;
     //Button genre_2;
-   // Button genre_3;
-    Button sett_butt;
+    //Button genre_3;
+    //Button sett_butt;
 
 
     @Override
@@ -45,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
         bg.startAnimation(alpha); //Starts the animation
 
 
-
-        random_story = (Button) findViewById(R.id.random_story);
+        ImageButton random_story = (ImageButton)findViewById(R.id.random_story);
 
         random_story.setOnClickListener(new View.OnClickListener() {
             @Override
