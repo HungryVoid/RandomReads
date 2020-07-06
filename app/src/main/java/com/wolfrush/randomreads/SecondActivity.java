@@ -72,7 +72,7 @@ public class SecondActivity extends AppCompatActivity {
 
     }
 
-    @Override
+    @Override //This overrides the phones back button to do the same thing as my back buttons
     public void onBackPressed() {
         Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
         startActivity(myIntent);

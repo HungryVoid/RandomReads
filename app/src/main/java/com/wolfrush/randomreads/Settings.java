@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.ToggleButton;
 
@@ -13,7 +14,6 @@ public class Settings extends AppCompatActivity {
 
     private ToggleButton night_mode;
     SharedPref sharedpref;
-    Button go_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {//The same Night Mode code as the other activities
@@ -47,7 +47,7 @@ public class Settings extends AppCompatActivity {
         });
 
 
-        go_back = (Button) findViewById(R.id.go_back);
+        ImageButton go_back = (ImageButton)findViewById(R.id.go_back);
 
         go_back.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){

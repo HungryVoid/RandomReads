@@ -17,11 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     SharedPref sharedpref; //Used for Night Mode
-    //Button random_story;
     //Button genre_1;
     //Button genre_2;
     //Button genre_3;
-    //Button sett_butt;
 
 
     @Override
@@ -57,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 int folderEnd = 4;
                 int randomFolder = a.nextInt(folderEnd - folderStart) + folderStart;*/
 
-                Random r = new Random(); //Choose a random file within the folder
+                Random r = new Random(); //Choose a random file within the folder. fileEnd must be one bigger than whats present.
                 int fileStart = 1;
-                int fileEnd = 35;
+                int fileEnd = 62;
                 int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
 
 
