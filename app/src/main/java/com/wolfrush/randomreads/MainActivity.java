@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Random r = new Random(); //Choose a random file within the folder. fileEnd must be one bigger than whats present.
                 int fileStart = 1;
-                int fileEnd = 62;
+                int fileEnd = 91;
                 int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
 
 
