@@ -18,7 +18,6 @@ public class SecondActivity extends AppCompatActivity {
 
     SharedPref sharedpref;
     ToggleButton toggle;
-    Button go_back_story;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { //The Night Mode code again

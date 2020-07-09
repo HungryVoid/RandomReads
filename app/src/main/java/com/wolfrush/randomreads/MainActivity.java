@@ -17,9 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     SharedPref sharedpref; //Used for Night Mode
-    //Button genre_1;
-    //Button genre_2;
-    //Button genre_3;
 
 
     @Override
@@ -43,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         bg.startAnimation(alpha); //Starts the animation
 
 
+
         ImageButton random_story = (ImageButton)findViewById(R.id.random_story);
 
         random_story.setOnClickListener(new View.OnClickListener() {
@@ -50,14 +48,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String text = "";
 
-                /*Random a = new Random(); //Choose a random folder
-                int folderStart = 1;
-                int folderEnd = 4;
-                int randomFolder = a.nextInt(folderEnd - folderStart) + folderStart;*/
-
                 Random r = new Random(); //Choose a random file within the folder. fileEnd must be one bigger than whats present.
                 int fileStart = 1;
-                int fileEnd = 93;
+                int fileEnd = 101;
                 int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
 
 
@@ -77,98 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-//Everything below are just more buttons
-
-        /*genre_1 = (Button) findViewById(R.id.genre_1);
-
-        genre_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String text = "";
-
-                Random r = new Random();
-                int fileStart = 1;
-                int fileEnd = 4;
-                int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
-
-
-                try {
-                    InputStream is = getAssets().open("1/" + randomFile + ".txt");
-                    int size = is.available();
-                    byte[] buffer = new byte[size];
-                    is.read(buffer);
-                    is.close();
-                    text = new String(buffer);
-                } catch (IOException ex){
-                    ex.printStackTrace();
-                }
-                Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
-                myIntent.putExtra("text_thing", text);
-                startActivity(myIntent);
-                finish();
-            }
-        });
-
-        genre_2 = (Button) findViewById(R.id.genre_2);
-
-        genre_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String text = "";
-
-                Random r = new Random();
-                int fileStart = 1;
-                int fileEnd = 4;
-                int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
-
-
-                try {
-                    InputStream is = getAssets().open("2/" + randomFile + ".txt");
-                    int size = is.available();
-                    byte[] buffer = new byte[size];
-                    is.read(buffer);
-                    is.close();
-                    text = new String(buffer);
-                } catch (IOException ex){
-                    ex.printStackTrace();
-                }
-                Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
-                myIntent.putExtra("text_thing", text);
-                startActivity(myIntent);
-                finish();
-            }
-        });
-
-        genre_3 = (Button) findViewById(R.id.genre_3);
-
-        genre_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String text = "";
-
-                Random r = new Random();
-                int fileStart = 1;
-                int fileEnd = 4;
-                int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
-
-
-                try {
-                    InputStream is = getAssets().open("3/" + randomFile + ".txt");
-                    int size = is.available();
-                    byte[] buffer = new byte[size];
-                    is.read(buffer);
-                    is.close();
-                    text = new String(buffer);
-                } catch (IOException ex){
-                    ex.printStackTrace();
-                }
-                Intent myIntent = new Intent(getBaseContext(), SecondActivity.class);
-                myIntent.putExtra("text_thing", text);
-                startActivity(myIntent);
-                finish();
-            }
-        });*/
 
 
         ImageButton sett_butt = (ImageButton)findViewById(R.id.sett_butt);
