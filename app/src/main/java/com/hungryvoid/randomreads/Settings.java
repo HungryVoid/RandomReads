@@ -1,13 +1,11 @@
-package com.wolfrush.randomreads;
+package com.hungryvoid.randomreads;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
-import android.widget.Switch;
 import android.widget.ToggleButton;
 
 public class Settings extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.wolfrush.randomreads;
+package com.hungryvoid.randomreads;
 
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import java.io.IOException;

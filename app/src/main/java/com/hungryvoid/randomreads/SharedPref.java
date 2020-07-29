@@ -1,4 +1,4 @@
-package com.wolfrush.randomreads;
+package com.hungryvoid.randomreads;
 
 import android.content.Context;
 import android.content.SharedPreferences;
