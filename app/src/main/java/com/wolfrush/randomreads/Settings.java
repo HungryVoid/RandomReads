@@ -59,7 +59,7 @@ public class Settings extends AppCompatActivity {
 
         });
 
-        //Need to add review button
+        //Need to add review button!
 
     }
 
