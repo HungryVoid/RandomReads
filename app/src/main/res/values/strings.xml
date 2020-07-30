@@ -2,14 +2,11 @@
     <string name="app_name">Random Reads</string>
     <string name="random_story">Randomize</string>
     <string name="story_text"></string>
-    <string name="genre_1">Horror</string>
-    <string name="genre_2">Romance</string>
     <string name="sett_butt">Settings</string>
     <string name="go_back">GO BACK</string>
     <string name="rad_sml">20</string>
     <string name="rad_big">40</string>
     <string name="toggle">toggle</string>
-    <string name="genre_3">Fairy Tales</string>
     <string name="go_back_story">GO BACK</string>
     <string name="bgimg">bgimg</string>
     <string name="review">Why not leave a review?</string>
