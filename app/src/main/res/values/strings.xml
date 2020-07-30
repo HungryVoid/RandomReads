@@ -12,4 +12,6 @@
     <string name="genre_3">Fairy Tales</string>
     <string name="go_back_story">GO BACK</string>
     <string name="bgimg">bgimg</string>
+    <string name="review">Why not leave a review?</string>
+    <string name="editText">Day/Night Mode</string>
 </resources>

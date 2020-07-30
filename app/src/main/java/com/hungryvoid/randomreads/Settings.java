@@ -1,17 +1,22 @@
 package com.hungryvoid.randomreads;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class Settings extends AppCompatActivity {
 
     private ToggleButton night_mode;
     SharedPref sharedpref;
+    Button review;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {//The same Night Mode code as the other activities
@@ -57,7 +62,23 @@ public class Settings extends AppCompatActivity {
 
         });
 
-        //Need to add review button!
+        review=(Button) findViewById(R.id.review);
+
+        review.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                Uri uri = Uri.parse("market://details?id=" + getPackageName());
+                Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+                try {
+                    startActivity(goToMarket);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(Settings.this, " Could Not Load", Toast.LENGTH_LONG).show();
+                }
+            }
+
+        });
 
     }
 
