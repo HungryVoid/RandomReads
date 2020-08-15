@@ -1,5 +1,7 @@
 package com.hungryvoid.randomreads;
 
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.content.Intent;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         ImageButton random_story = (ImageButton)findViewById(R.id.random_story);
+
+
+        ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder( //This animates the Random Story button
+                random_story,
+                PropertyValuesHolder.ofFloat("scaleX", 1.2f),
+                PropertyValuesHolder.ofFloat("scaleY", 1.2f));
+        scaleDown.setDuration(1000); //Time it takes animation to complete
+
+        scaleDown.setRepeatCount(ObjectAnimator.INFINITE); //Makes the animation infinite
+        scaleDown.setRepeatMode(ObjectAnimator.REVERSE); //Reverses the animation to the stating point
+
+        scaleDown.start();
+
 
         random_story.setOnClickListener(new View.OnClickListener() {
             @Override
