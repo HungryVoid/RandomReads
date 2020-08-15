@@ -16,6 +16,7 @@
         <item name="go_back_story">@drawable/go_back_story1</item>
         <item name="toggle">@drawable/toggle1</item>
         <item name="night_mode">@drawable/bulb_off</item>
+        <item name="refresh">@drawable/refresh1</item>
     </style>
 
     <!-- Night theme. -->
@@ -34,6 +35,7 @@
         <item name="go_back_story">@drawable/go_back_story2</item>
         <item name="toggle">@drawable/toggle2</item>
         <item name="night_mode">@drawable/bulb_on</item>
+        <item name="refresh">@drawable/refresh2</item>
     </style>
 
 </resources>

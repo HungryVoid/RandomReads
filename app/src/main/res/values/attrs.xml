@@ -11,5 +11,6 @@
         <attr name="go_back_story" format="reference"/>
         <attr name="toggle" format="reference"/>
         <attr name="night_mode" format="reference"/>
+        <attr name="refresh" format="reference"/>
     </declare-styleable>
 </resources>

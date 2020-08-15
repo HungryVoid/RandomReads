@@ -3,8 +3,8 @@ package com.hungryvoid.randomreads;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,7 +50,7 @@ public class Settings extends AppCompatActivity {
             }
         });
 
-        ConstraintLayout bg = (ConstraintLayout) findViewById(R.id.bg); //This references the background in the activity_main XML
+        ConstraintLayout bg = (ConstraintLayout) findViewById(R.id.bg); //This references the background in the activity_settings XML
 
 
         ImageButton go_back = (ImageButton)findViewById(R.id.go_back);

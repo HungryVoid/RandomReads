@@ -1,7 +1,7 @@
 package com.hungryvoid.randomreads;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -9,6 +9,10 @@ import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Random;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -50,6 +54,36 @@ public class SecondActivity extends AppCompatActivity {
 
             }
 
+        });
+
+        ImageButton refresh = (ImageButton)findViewById(R.id.refresh);
+
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = "";
+
+                Random r = new Random(); //Choose a random file within the folder. fileEnd must be one bigger than whats present.
+                int fileStart = 1;
+                int fileEnd = 101;
+                int randomFile = r.nextInt(fileEnd - fileStart) + fileStart;
+
+
+                try { //This is what opens up the chosen file
+                    InputStream is = getAssets().open(randomFile + ".txt");
+                    int size = is.available();
+                    byte[] buffer = new byte[size];
+                    is.read(buffer);
+                    is.close();
+                    text = new String(buffer);
+                } catch (IOException ex){
+                    ex.printStackTrace();
+                }
+                Intent myIntent = new Intent(getBaseContext(), SecondActivity.class); //This sends the file and moves us to the new screen to display it
+                myIntent.putExtra("text_thing", text);
+                startActivity(myIntent);
+                finish();
+            }
         });
 
         ImageButton go_back_story = (ImageButton)findViewById(R.id.go_back_story);
