@@ -18,6 +18,7 @@ public class Settings extends AppCompatActivity {
     private ToggleButton night_mode;
     SharedPref sharedpref;
     Button review;
+    Button disclaimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {//The same Night Mode code as the other activities
@@ -58,6 +59,18 @@ public class Settings extends AppCompatActivity {
         go_back.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 Intent myIntent = new Intent(getBaseContext(), MainActivity.class);
+                startActivity(myIntent);
+                finish();
+            }
+
+
+        });
+
+        disclaimer=(Button) findViewById(R.id.disclaimer);
+
+        disclaimer.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent myIntent = new Intent(getBaseContext(), Disclaimer.class);
                 startActivity(myIntent);
                 finish();
             }

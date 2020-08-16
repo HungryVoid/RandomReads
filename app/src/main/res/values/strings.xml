@@ -13,4 +13,6 @@
     <string name="editText">Day/Night Mode</string>
     <string name="day_night">Day/Night Mode</string>
     <string name="refresh">refresh</string>
+    <string name="disclaimer">disclaimer</string>
+    <string name="dis_text">All stories presented in this application are freely available within the public domain and no money has been, or will be, made from them. This application exists simply to share great stories from history. All stories are presented as they were originally written. Due to their age, some stories may contain outdated beliefs and descriptions that are no longer acceptable today. All efforts have been made to share these great stories, while also avoiding anything offensive. Please enjoy.</string>
 </resources>
