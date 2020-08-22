@@ -69,13 +69,10 @@ public class Settings extends AppCompatActivity {
         disclaimer=(Button) findViewById(R.id.disclaimer);
 
         disclaimer.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                Intent myIntent = new Intent(getBaseContext(), Disclaimer.class);
-                startActivity(myIntent);
-                finish();
+            public void onClick(View view) {
+                Intent disIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://hungryvoid.github.io/PrivacyPolicy/")); //This line connects the button to the website
+                startActivity(disIntent);
             }
-
-
         });
 
         review=(Button) findViewById(R.id.review);
